@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int n, i, count, soma = 0, num = 2;
+
+    printf("Digite a quantidade de numeros primos a serem somados: ");
+    scanf("%d", &n);
+
+    while (count < n) {
+        int eh_primo = 1;
+        for (i = 2; i <= num / 2; i++) {
+            if (num % i == 0) {
+                eh_primo = 0;
+                break;
+            }
+        }
+        if (eh_primo) {
+            soma += num;
+            count++;
+        }
+        num++;
+    }
+
+    printf("A soma dos %d primeiros numeros primos e: %d\n", n, soma);
+
+    return 0;
+}
