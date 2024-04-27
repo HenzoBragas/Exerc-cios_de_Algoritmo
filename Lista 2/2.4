@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int n, primeiro = 0, segundo = 1, proximo, i;
+
+    printf("Digite o valor de n: ");
+    scanf("%d", &n);
+
+    printf("Os %d primeiros termos da serie de Fibonacci sao:\n", n);
+
+    for (i = 0; i < n; i++) {
+        if (i <= 1)
+            proximo = i;
+        else {
+            proximo = primeiro + segundo;
+            primeiro = segundo;
+            segundo = proximo;
+        }
+        printf("%d ", proximo);
+    }
+
+    printf("\nO %d-esimo termo da serie de Fibonacci e: %d\n", n, proximo);
+
+    return 0;
+}
