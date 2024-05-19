@@ -1,22 +1,21 @@
 #include <stdio.h>
 
-int main()
-{
-    int linha, coluna, matriz[3][3];
-    
-    printf("Digite valores de 0 a 100:");
-    for(linha = 0 ; linha < 3; linha++){
-        for(coluna = 0; coluna < 3; coluna++){
-            scanf("%d", &matriz[linha][coluna]);
+int main() {
+    int matriz[3][3], i, j;
+
+    printf("Digite valores de 0 a 100: ");
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            scanf("%d", &matriz[i][j]);
         }
     }
-    
-    for(linha = 0; linha < 3 ; linha++){
-        for(coluna = 0; coluna < 3 ; coluna++){
-            printf("%d\n", matriz[linha][coluna]);
+
+    for(i = 0; i < 3; i++) {
+        for(j = 0; j < 3; j++) {
+            printf("%d ", matriz[i][j]);
         }
-        printf("\n");
+        printf("\n"); 
     }
-   
-    return 0; 
+
+    return 0;
 }
