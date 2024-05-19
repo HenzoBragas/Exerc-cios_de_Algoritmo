@@ -1,33 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int vetor[15], i, j, min, temp;
+    int vetor[10], i, par = 0;
 
-    printf("Digite 15 elementos para o vetor:\\n");
-    for(i = 0; i < 15; i++) {
+    printf("Digite 10 elementos para o vetor:\n");
+    for(i = 0; i < 10; i++) {
         scanf("%d", &vetor[i]);
     }
-
-
-    for(i = 0; i < 14; i++) {
-        min = i;
-        for(j = i + 1; j < 15; j++) {
-            if(vetor[j] < vetor[min]) {
-                min = j;
-            }
-        }
-        if(min != i) {
-            temp = vetor[i];
-            vetor[i] = vetor[min];
-            vetor[min] = temp;
+    for(i = 0; i < 10; i++) {
+        if(vetor[i] % 2 == 0) {
+            par++;
         }
     }
-
-    printf("Vetor ordenado em ordem crescente:\\n");
-    for(i = 0; i < 15; i++) {
-        printf("%d ", vetor[i]);
-    }
-    printf("\\n");
+    printf("O vetor contém %d números pares.", par);
 
     return 0;
 }
