@@ -14,7 +14,7 @@ for(j=1; j <15 ; j++){
 }
   if(min != i){
     temp = vetor[i];
-    vetor[i] = vetor[min]
+    vetor[i] = vetor[min];
     vetor[min] = temp;
 }
 }
